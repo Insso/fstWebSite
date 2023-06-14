@@ -1,0 +1,123 @@
+/* Le BODY */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+ /*enlever le display du body
+  height: 100vh;  dans sidebar  */
+body {
+    display: flex;
+}
+
+  
+/* home-navigation-bar */
+
+#sidebar {
+    border: 1px dotted black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 306px;
+    height: 100vh;
+    /* height: 100%; */
+    /* max-height: 1097px; */
+    /* overflow: auto; */
+    /*flex-shrink: 0;*/ /* Empêche la réduction de la taille de la barre latérale */
+    background-color: #1E1E1E;
+    padding: 10px;   
+}
+
+/* postion du logo + taille */
+#monLogo{
+    /* border: 10px dotted red; */
+    width: 169px;
+    height: 169px;
+    /* alignet mon logo */
+    margin-left: 20%;
+    margin-right: 20%;
+    }   
+
+/* position de Menu + Home avec SVG + barre de séparation */
+h2 { /* pos menu + color + font*/
+  color: #807C7C;
+  font-family: 'Inter';
+  font-style:normal;
+  position: relative;
+  left: 10%;
+  margin-bottom: 5%;
+}
+h3{/* pos text home + color + font*/
+  color: #07CA5B;
+  font-family: 'Inter';
+  font-style: inherit;
+}
+#textLogOut{ /* pos text logout + color + font*/
+  color: #FF7E06;
+  font-family: 'Inter';
+  font-style:inherit;
+  font-size: 1.15em;
+  font-weight:650;
+}
+h4 { /* text blanc color + font */
+  color: white;
+  font-family: 'Inter';
+  font-style: inherit;
+}
+/* tout mettre sur la même ligne 
+   logoHomeContainer + logoAddContainer + logoDownloadContainer*/
+#logoHomeContainer { 
+  display: flex;
+  align-items: center;
+}
+#logoAddContainer{ 
+  display: flex;
+  align-items: center;
+}
+#logoDownloadContainer{ 
+  display: flex;
+  align-items: center;
+}
+#logoLogOutContainer{ 
+  display: flex;
+  align-items: center;
+}
+/* pos ligne de séparation +color + size */
+div#separationLine1{
+  border-bottom: 2px solid white;
+  width: 85%;
+  margin-left: 5%;
+}
+div#espaceDeSeparation{
+  border-bottom: 0px solid white;
+  width: 85%;
+  margin-left: 5%;
+  margin-top: 20%;
+}
+/* pos° des logo*/
+#logoHome {
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+#logoAdd{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+#logoDownload{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+#logoLogOut{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+/* pos° du pti carre que je voulais en ptite barre */
+#miniLine {
+  margin-left: 55%;
+}
+
+
+
+
+
+
