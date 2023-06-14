@@ -1,31 +1,45 @@
 /* Le BODY */
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
- /*enlever le display du body
-  height: 100vh;  dans sidebar  */
+
 body {
-    display: flex;
+    display: grid;
+    background-color: black;
+    grid-template-columns: auto 1fr auto; /* Deux colonnes : sidebar et contenu principal */
+    grid-template-rows: auto 1fr auto; /* Définit trois rangées : en-tête, contenu principal, pied de page */
+    min-height: 100vh; /* Assure une hauteur minimale de l'écran */
 }
 
+#myHeader {
+  background-color: #000000; /* Couleur de fond pour le contenu principal */
+  padding: 20px; /* Espacement intérieur pour le contenu principal */
+  height: 47.5px;
+  grid-column: 2; /* Place le header dans la deuxième colonne */
+}
+#myMain {
+  background-color: #1E1E1E; /* Couleur de fond pour le contenu principal */
+  padding: 20px; /* Espacement intérieur pour le contenu principal */
+  grid-column: 2; 
+  grid-row: 2 ; /* Étend le contenu principal sur une rangée */
+  margin: 10%;
+}
+#myFooter {
+  background-color: #02C656; 
+  padding: 20px; /* Espacement intérieur pour l'en-tête et le pied de page */
+  color: white; /* Couleur du texte pour l'en-tête et le pied de page */
+  grid-column: 2; 
+}
   
 /* home-navigation-bar */
-
 #sidebar {
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
     position: sticky;
     top: 0;
     left: 0;
-    width: 306px;
+    width: auto;
     height: 100vh;
-    /* height: 100%; */
-    /* max-height: 1097px; */
-    /* overflow: auto; */
-    /*flex-shrink: 0;*/ /* Empêche la réduction de la taille de la barre latérale */
     background-color: #1E1E1E;
     padding: 10px;   
+    grid-row: 1 / span 3; /* Place la sidebar dans les rangées 3 rangées */
+}
 }
 
 /* postion du logo + taille */
@@ -117,9 +131,3 @@ div#espaceDeSeparation{
 #miniLine {
   margin-left: 55%;
 }
-
-
-
-
-
-
