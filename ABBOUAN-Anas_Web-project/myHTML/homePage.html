@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <aside id="sidebar">
+    <aside id="sidebar" class="sidebarContainer">
             
             <img id="monLogo"
                 src="/myImages/myLogo.png" 
@@ -39,7 +39,7 @@
                     src="/myImages/addLight.svg"
                     alt="addSVG"
                     >
-                <h4>Quick Add</h4>
+                <h4>QuickAdd</h4>
             </div>
         
             <div id="logoDownloadContainer">
@@ -57,20 +57,51 @@
                     src="/myImages/logOut.svg"
                     alt="LogOutSVG"
                     >
-                <p id="textLogOut">Log Out</p>
+                <p id="textLogOut">LogOut</p>
             </div>
             
     </aside>
     <header id="myHeader">
+        <!-- <nav class="discovery-nav"><a href="#/discovery/anime" spellcheck="false">Anime</a><a href="#/discovery/manga" spellcheck="false">Manga</a><a href="#/discovery/manhwa" spellcheck="false">Manhwa</a><a href="#/discovery/manhua" spellcheck="false">Manhua</a></nav> -->
+        <nav>
+            <a href="#">Manga</a>
+            <a href="#">Manhwa</a>
+            <a href="#">Anime</a>
+        </nav>
+
     </header>
 
     <main id="myMain">
+        <div id="barreVerte">
+            <p>Manga list</p>
+        </div>
+        <div id="enTete">
+            <table>
+                <tr>
+                  <th>#</th>
+                  <th>Image</th>
+                  <th>Anime Title</th>
+                  <th>Status</th>
+                  <th>Chapter</th>
+                  <th>Progress</th>
+                  <th>Link</th>
+                </tr>
+              </table>
+        </div>
+        <div id="laListe">
+
+        </div>
     </main>
 
     <footer id="myFooter">
         <p>My footer bar</p>
     </footer>
 
+    
+    <script src="/myJS/monScript.js"></script>
 </body>
 </html>
-<!-- jen était au margin -->
+
+<!-- J'en étais au nav en train d'ajuster le padding et le margin
+    aussi faut corriger vite la ligne inférieur du tableau car non visible
+    faut ajuster les margin/padding -->

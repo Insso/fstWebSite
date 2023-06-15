@@ -11,21 +11,84 @@ body {
 #myHeader {
   background-color: #000000; /* Couleur de fond pour le contenu principal */
   padding: 20px; /* Espacement intérieur pour le contenu principal */
-  height: 47.5px;
   grid-column: 2; /* Place le header dans la deuxième colonne */
+  margin: 2%;
+}
+#myHeader nav {
+  background-color: #000000;
+  padding: 10px;
 }
 #myMain {
   background-color: #1E1E1E; /* Couleur de fond pour le contenu principal */
-  padding: 20px; /* Espacement intérieur pour le contenu principal */
+  padding: 1%; /* Espacement intérieur pour le contenu principal */
   grid-column: 2; 
   grid-row: 2 ; /* Étend le contenu principal sur une rangée */
-  margin: 10%;
+  margin: 5%;
+  display: grid;
+  grid-template-columns: auto; /* Nombre dynamique de colonnes */
+  grid-template-rows: 5% 7% 88% ; /* Trois rangées dont la taille sera régle automatiquement */
+  gap: 0px;
+  align-content: start;
 }
+#barreVerte{
+  background-color: #02C656;
+  color: white;
+  grid-row: 1;
+  text-align: center;
+  font-family: 'Inter';
+  font-style:normal;
+  font-size: 1.15em;
+  font-weight:650;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#enTete {
+  background-color: #1E1E1E;
+  grid-row: 2;
+}
+#enTete table {
+  width: 100%;
+  border-collapse: collapse;
+  height: inherit; /* Prend la même hauteur que la table */
+}
+#enTete th {
+  background-color: #1E1E1E;
+  color: white;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 0.8em;
+  padding: 5px;
+  text-align:left;
+  border: 1px solid white;
+}
+#enTete th:nth-child(3) {
+  width: 25%;
+}
+#enTete th:nth-child(2) {
+  width: 10%;
+}
+#enTete th:nth-child(7) {
+  width: 30%;
+}
+#laListe{
+  background-color: #1E1E1E;
+  grid-row: 3;
+}
+
 #myFooter {
   background-color: #02C656; 
   padding: 20px; /* Espacement intérieur pour l'en-tête et le pied de page */
   color: white; /* Couleur du texte pour l'en-tête et le pied de page */
   grid-column: 2; 
+
+  grid-row: 3;
+  text-align: center;
+  font-family: 'Inter';
+  font-style:normal;
+  font-size: 0.8em;
+  font-weight:650;
 }
   
 /* home-navigation-bar */
@@ -39,17 +102,22 @@ body {
     background-color: #1E1E1E;
     padding: 10px;   
     grid-row: 1 / span 3; /* Place la sidebar dans les rangées 3 rangées */
+    display: flex;
+    flex-direction: column; /* Nouvelle ligne ajoutée */
+    align-items: flex-start;
+    position: relative;
+    
 }
-}
+
 
 /* postion du logo + taille */
 #monLogo{
-    /* border: 10px dotted red; */
-    width: 169px;
-    height: 169px;
-    /* alignet mon logo */
-    margin-left: 20%;
-    margin-right: 20%;
+  /* border: 10px dotted red; */
+  width: 169px;
+  height: 169px;
+  display: flex;
+  align-items: center;
+
     }   
 
 /* position de Menu + Home avec SVG + barre de séparation */
@@ -103,6 +171,7 @@ div#separationLine1{
   width: 85%;
   margin-top: 5%;
   margin-left: 5%;
+  margin-bottom: 5%;
 }
 div#espaceDeSeparation{
   border-bottom: 0px solid white;
@@ -131,3 +200,4 @@ div#espaceDeSeparation{
 #miniLine {
   margin-left: 55%;
 }
+
