@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD Page Insso</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/myCSS/mesStyles2.css">
+</head>
+
+<body>
+    
+    <aside id="sidebar" class="sidebarContainer">
+            
+            <img id="monLogo"
+                src="/myImages/myLogo.png" 
+                alt="Logo dmon siteZer" 
+            />
+        
+            <h2>MENU</h2>
+            
+            <div id="logoHomeContainer">
+                <img id="logoHome" 
+                    src="/myImages/homeWhite.svg"
+                    alt="homeSVG"
+                    >
+                <h4>Home</h4>
+                
+            </div>
+            <div id="separationLine1"></div>
+            <div id="espaceDeSeparation"></div>
+            
+            <h2>LIBRARY</h2>
+            <div id="logoAddContainer">
+                <img id="logoAdd" 
+                    src="/myImages/addLightGreen.svg"
+                    alt="addSVG"
+                    >
+                <h3>QuickAdd</h3>
+                <img id="miniLine" 
+                    src="/myImages/rectangle.svg"
+                    alt="miniLine"
+                    >
+            </div>
+        
+            <div id="logoDownloadContainer">
+                <img id="logoDownload" 
+                    src="/myImages/download.svg"
+                    alt="downloadSVG"
+                    >
+                <h4>Download</h4>
+            </div>
+        
+            <div id="separationLine1"></div>
+            
+            <div id="logoLogOutContainer">
+                <img id="logoLogOut" 
+                    src="/myImages/logOut.svg"
+                    alt="LogOutSVG"
+                    >
+                <p id="textLogOut">LogOut</p>
+            </div>
+            
+    </aside>
+    <header id="myHeader">
+        <!-- <nav class="discovery-nav"><a href="#/discovery/anime" spellcheck="false">Anime</a><a href="#/discovery/manga" spellcheck="false">Manga</a><a href="#/discovery/manhwa" spellcheck="false">Manhwa</a><a href="#/discovery/manhua" spellcheck="false">Manhua</a></nav> -->
+        <nav>
+            <a href="#">Manga</a>
+            <a href="#">Manhwa</a>
+            <a href="#">Anime</a>
+        </nav>
+
+    </header>
+
+    <main id="myMain">
+        <div id="barreVerte">
+            <p>Manga list</p>
+        </div>
+        <div id="enTete">
+            <table>
+                <tr>
+                  <th>#</th>
+                  <th>Image</th>
+                  <th>Title</th>
+                  <th>Status</th>
+                  <th>Chapter</th>
+                  <th>Progress</th>
+                  <th>Link</th>
+                </tr>
+              </table>
+        </div>
+        <div id="laListe">
+            
+            <table>
+                <tbody id="mangaListBody">
+                  <!-- Les lignes des mangas seront ajoutées dynamiquement ici -->
+                </tbody>
+              </table>
+        </div>
+    </main>
+
+    <footer id="myFooter">
+        <p>My footer bar</p>
+    </footer>
+
+    <div id="addFormOverlay">
+        <form id="addForm">
+          <h2>Add Manga/Anime</h2>
+          <label for="type">Type:</label>
+          <select id="type" name="type">
+            <option value="manga">Manga</option>
+            <option value="anime">Anime</option>
+            <option value="manhwa">Manhwa</option>
+          </select>
+          <!-- Ajoute les autres champs ici (image, titre, status, nombre de chapitres, progression, lien) -->
+          <button type="submit">Add</button>
+          <button type="button" id="cancelButton">Cancel</button>
+        </form>
+      </div>
+    <script src="/myJS/monScript.js"></script>
+</body>
+</html>
+<!-- Reste à ajuster le header et a faire la liste -->

@@ -1,0 +1,272 @@
+/* Le BODY */
+
+body {
+    display: grid;
+    background-color: black;
+    grid-template-columns: auto 1fr auto; /* Deux colonnes : sidebar et contenu principal */
+    grid-template-rows: auto 1fr auto; /* Définit trois rangées : en-tête, contenu principal, pied de page */
+    min-height: 100vh; /* Assure une hauteur minimale de l'écran */
+}
+/* ***********************ADD************************** */
+
+/* ************************************************* */
+/* ***********************HEADER************************** */
+#myHeader {
+  background-color: #000000; /* Couleur de fond pour le contenu principal */
+  padding: 1%; /* Espacement intérieur pour le contenu principal */
+  grid-column: 2; /* Place le header dans la deuxième colonne */
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+#myHeader nav {
+    border-bottom: 1px solid #FFFFFF; /* Crée une bordure en bas du nav */
+    line-height: 2.25; /* Ajuste la hauteur de la ligne */
+    
+}
+nav a {
+  color: #FFFFFF; /* Couleur du texte */
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  font-family: 'Inter'; /* Utilise une variante plus fine de la police Inter */
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+nav a:hover {
+  color: #02C656; /* Couleur du texte au survol */
+}
+/* ************************************************* */
+/* ********************MAIN***************************** */
+#myMain {
+  background-color: black; /* Couleur de fond pour le contenu principal */
+  padding: 1%; /* Espacement intérieur pour le contenu principal */
+  grid-column: 2; 
+  grid-row: 2 ; /* Étend le contenu principal sur une rangée */
+  margin: 5%;
+  display: grid;
+  grid-template-columns: auto; /* Nombre dynamique de colonnes */
+  grid-template-rows: 6% auto 84% ; /* Trois rangées dont la taille sera régle automatiquement */
+  gap: 0px;
+  align-content: start;
+}
+#barreVerte{
+  background-color: #02C656;
+  color: white;
+  grid-row: 1;
+  text-align: center;
+  font-family: 'Inter';
+  font-style:normal;
+  font-size: 1.15em;
+  font-weight:650;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white; /* Ajout de la bordure */
+  padding: 5px; /* Ajuste le padding pour maintenir l'épaisseur de la bordure */
+}
+#enTete {
+  background-color: #1E1E1E;
+  grid-row: 2;
+}
+#enTete table {
+  width: 100%;
+  border-collapse: collapse;
+  height: inherit; /* Prend la même hauteur que la table */
+}
+#enTete th {
+  background-color: #1E1E1E;
+  color: white;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 0.8em;
+  padding: 5px;
+  text-align:left;
+  border: 1px solid white;
+}
+
+/* gestion de la largeur des cellules */
+#enTete th:nth-child(1) {
+  width: 4%;
+}
+#enTete th:nth-child(2) {
+  width: 11%;
+}
+#enTete th:nth-child(3) {
+  width: 24%;
+}
+#enTete th:nth-child(4){
+  width: 12%;
+}
+#enTete th:nth-child(5), #enTete th:nth-child(6){
+  width: 21%;
+}
+#enTete th:nth-child(7) {
+  width: 7%;
+}
+#laListe{
+  background-color: #1E1E1E;
+  grid-row: 3;
+  border: 1px solid white; /* Ajout de la bordure */
+  padding: 0px; /* Ajuste le padding pour maintenir l'épaisseur de la bordure */
+}
+#laListe table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#laListe td {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 0.8em;
+  padding: 5px;
+  text-align: left;
+  border: 1px solid white;
+}
+
+/* Gestion de la largeur des cellules */
+#laListe td:nth-child(1){
+  width: 4%;
+}
+#laListe td:nth-child(2) {
+  width: 11%;
+}
+#laListe td:nth-child(3){
+  width: 24%;
+}
+#laListe td:nth-child(4){
+  width: 12%;
+}
+#laListe td:nth-child(5), #laListe td:nth-child(6){
+  width: 21%;
+}
+#laListe td:nth-child(7) {
+  width: 7%;
+}
+
+/* ************************************************* */
+/* **********************FOOTER*************************** */
+#myFooter {
+  background-color: #02C656; 
+  padding: 20px; /* Espacement intérieur pour l'en-tête et le pied de page */
+  color: white; /* Couleur du texte pour l'en-tête et le pied de page */
+  grid-column: 2; 
+
+  grid-row: 3;
+  text-align: center;
+  font-family: 'Inter';
+  font-style:normal;
+  font-size: 0.8em;
+  font-weight:650;
+}
+/* ************************************************* */
+/* *********************SIDEBAR**************************** */  
+/* home-navigation-bar */
+#sidebar {
+    /* border: 1px dotted black; */
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100vh;
+    background-color: #1E1E1E;
+    padding: 10px;   
+    grid-row: 1 / span 3; /* Place la sidebar dans les rangées 3 rangées */
+    display: flex;
+    flex-direction: column; /* Nouvelle ligne ajoutée */
+    align-items: flex-start;
+    position: relative;
+    
+}
+/* postion du logo + taille */
+#monLogo{
+  /* border: 10px dotted red; */
+  width: 169px;
+  height: 169px;
+  display: flex;
+  align-items: center;
+
+}   
+/* position de Menu + Home avec SVG + barre de séparation */
+h2 { /* pos menu + color + font*/
+  color: #807C7C;
+  font-family: 'Inter';
+  font-style:normal;
+  position: relative;
+  left: 10%;
+  margin-bottom: 5%;
+}
+h3{/* pos text home + color + font*/
+  color: #07CA5B;
+  font-family: 'Inter';
+  font-style: inherit;
+}
+#textLogOut{ /* pos text logout + color + font*/
+  color: #FF7E06;
+  font-family: 'Inter';
+  font-style:inherit;
+  font-size: 1.15em;
+  font-weight:650;
+}
+h4 { /* text blanc color + font */
+  color: white;
+  font-family: 'Inter';
+  font-style: inherit;
+}
+/* tout mettre sur la même ligne 
+   logoHomeContainer + logoAddContainer + logoDownloadContainer*/
+#logoHomeContainer { 
+  display: flex;
+  align-items: center;
+}
+#logoAddContainer{ 
+  display: flex;
+  align-items: center;
+}
+#logoDownloadContainer{ 
+  display: flex;
+  align-items: center;
+}
+#logoLogOutContainer{
+  margin-top: 10%; 
+  display: flex;
+  align-items: center;
+}
+/* pos ligne de séparation +color + size */
+div#separationLine1{
+  border-bottom: 2px solid white;
+  width: 85%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+div#espaceDeSeparation{
+  border-bottom: 0px solid white;
+  width: 85%;
+  margin-left: 5%;
+  margin-top: 20%;
+}
+/* pos° des logo*/
+#logoHome {
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+#logoAdd{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+#logoDownload{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+#logoLogOut{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+/* pos° du pti carre que je voulais en ptite barre */
+#miniLine {
+  margin-left: 30%;
+}
+/* ************************************************* */
+

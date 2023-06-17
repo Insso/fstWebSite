@@ -7,18 +7,19 @@ body {
     grid-template-rows: auto 1fr auto; /* Définit trois rangées : en-tête, contenu principal, pied de page */
     min-height: 100vh; /* Assure une hauteur minimale de l'écran */
 }
-
+/* ***********************HEADER************************** */
 #myHeader {
   background-color: #000000; /* Couleur de fond pour le contenu principal */
   padding: 1%; /* Espacement intérieur pour le contenu principal */
   grid-column: 2; /* Place le header dans la deuxième colonne */
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 2%;
 }
 
 #myHeader nav {
     border-bottom: 1px solid #FFFFFF; /* Crée une bordure en bas du nav */
-    line-height: 1.5; /* Ajuste la hauteur de la ligne */
+    line-height: 2.25; /* Ajuste la hauteur de la ligne */
     
 }
 nav a {
@@ -33,6 +34,7 @@ nav a:hover {
   color: #02C656; /* Couleur du texte au survol */
 }
 /* ************************************************* */
+/* ********************MAIN***************************** */
 #myMain {
   background-color: black; /* Couleur de fond pour le contenu principal */
   padding: 1%; /* Espacement intérieur pour le contenu principal */
@@ -80,15 +82,25 @@ nav a:hover {
   text-align:left;
   border: 1px solid white;
 }
+
 /* gestion de la largeur des cellules */
-#enTete th:nth-child(3) {
-  width: 25%;
+#enTete th:nth-child(1) {
+  width: 4%;
 }
 #enTete th:nth-child(2) {
-  width: 10%;
+  width: 11%;
+}
+#enTete th:nth-child(3) {
+  width: 24%;
+}
+#enTete th:nth-child(4){
+  width: 12%;
+}
+#enTete th:nth-child(5), #enTete th:nth-child(6){
+  width: 21%;
 }
 #enTete th:nth-child(7) {
-  width: 30%;
+  width: 7%;
 }
 #laListe{
   background-color: #1E1E1E;
@@ -96,7 +108,42 @@ nav a:hover {
   border: 1px solid white; /* Ajout de la bordure */
   padding: 0px; /* Ajuste le padding pour maintenir l'épaisseur de la bordure */
 }
+#laListe table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
+#laListe td {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 0.8em;
+  padding: 5px;
+  text-align: left;
+  border: 1px solid white;
+}
+
+/* Gestion de la largeur des cellules */
+#laListe td:nth-child(1){
+  width: 4%;
+}
+#laListe td:nth-child(2) {
+  width: 11%;
+}
+#laListe td:nth-child(3){
+  width: 24%;
+}
+#laListe td:nth-child(4){
+  width: 12%;
+}
+#laListe td:nth-child(5), #laListe td:nth-child(6){
+  width: 21%;
+}
+#laListe td:nth-child(7) {
+  width: 7%;
+}
+
+/* ************************************************* */
+/* **********************FOOTER*************************** */
 #myFooter {
   background-color: #02C656; 
   padding: 20px; /* Espacement intérieur pour l'en-tête et le pied de page */
@@ -110,7 +157,8 @@ nav a:hover {
   font-size: 0.8em;
   font-weight:650;
 }
-  
+/* ************************************************* */
+/* *********************SIDEBAR**************************** */  
 /* home-navigation-bar */
 #sidebar {
     /* border: 1px dotted black; */
@@ -128,8 +176,6 @@ nav a:hover {
     position: relative;
     
 }
-
-
 /* postion du logo + taille */
 #monLogo{
   /* border: 10px dotted red; */
@@ -138,8 +184,7 @@ nav a:hover {
   display: flex;
   align-items: center;
 
-    }   
-
+}   
 /* position de Menu + Home avec SVG + barre de séparation */
 h2 { /* pos menu + color + font*/
   color: #807C7C;
@@ -220,4 +265,5 @@ div#espaceDeSeparation{
 #miniLine {
   margin-left: 55%;
 }
+/* ************************************************* */
 
