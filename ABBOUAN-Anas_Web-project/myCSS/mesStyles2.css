@@ -8,7 +8,23 @@ body {
     min-height: 100vh; /* Assure une hauteur minimale de l'écran */
 }
 /* ***********************ADD************************** */
+#addFormOverlay{
+    background-color: white;
+    position: absolute;
+    width: 50%;
+    height: 20%;
 
+    margin-left: 30%;
+    margin-right: 25%;
+    margin-block: 17%;
+    display: flex;          /*aligne tous les éléments*/
+    align-items: center;    /*au milieu verticalement*/
+    justify-content: center; /*au milieu horizontalement*/
+    z-index: 9999;          /*pour le mettre au premier plan*/
+
+    border: 7px solid #02C656; /* Ajout de la bordure */ 
+    border-radius: 20px;   
+}
 /* ************************************************* */
 /* ***********************HEADER************************** */
 #myHeader {
@@ -115,7 +131,6 @@ nav a:hover {
   width: 100%;
   border-collapse: collapse;
 }
-
 #laListe td {
   font-family: 'Inter';
   font-weight: 400;
@@ -177,6 +192,7 @@ nav a:hover {
     flex-direction: column; /* Nouvelle ligne ajoutée */
     align-items: flex-start;
     position: relative;
+    z-index: 99999;
     
 }
 /* postion du logo + taille */
