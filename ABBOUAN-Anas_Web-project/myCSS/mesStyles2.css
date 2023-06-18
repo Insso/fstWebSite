@@ -23,8 +23,126 @@ body {
     z-index: 9999;          /*pour le mettre au premier plan*/
 
     border: 7px solid #02C656; /* Ajout de la bordure */ 
-    border-radius: 20px;   
+    border-radius: 20px; 
+    
 }
+#blurWindow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(2px);
+  z-index: 9998; /* Mettez-le en-dessous de addFormOverlay */
+}
+/* liste déroulante zer style selectionneur type */
+#addForm select {
+  box-sizing: border-box;
+  width:fit-content;
+  height:fit-content;
+  background: #FFFFFF;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: 'Roboto Flex';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.55);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none; /* Supprime l'apparence par défaut du navigateur */
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 25px 0 10px; /* Ajoute un espacement pour la flèche */
+  background-image: url("/myImages/downArrow.svg"); /* Remplace avec l'image de la flèche vers le bas */
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+/* liste déroulante complémentStyle pour l'option sélectionnée */
+#addForm select option:checked {
+  background-color: #1E1E1E;
+  color: white;
+}
+/* style pour info user à écrire */
+#addForm input[type="text"] {
+  box-sizing: border-box;
+  width:100px;
+  height: fit-content;
+  background: #FFFFFF;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: 'Roboto Flex';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.55);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0 15px;
+}
+/* style pour l'input de l'image */
+#addForm input[type="file"] {
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  background: #FFFFFF;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: 'Roboto Flex';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.55);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0 15px;
+}
+/* style pour les bouton add et cancel */
+button[type="submit"], button[type="button"] {
+  width: 53px;
+  height: 21px;
+  background: #02C656;
+  border-radius: 100px;
+  /* Inside auto layout */
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+  position: relative;
+}
+
+button[type="submit"]::before, button[type="button"]::before {
+  /* content: ''; */
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  left: calc(50% - 28px/2 + 0.5px);
+  top: calc(50% - 20px/2 + 0.5px);
+  
+  font-family: 'Roboto Flex';
+  font-style: normal;
+  font-weight:bold;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  text-align: center;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* button[type="submit"]::before {
+  content: 'Add';
+}
+
+button[type="button"]::before {
+  content: 'Cancel';
+} */
 /* ************************************************* */
 /* ***********************HEADER************************** */
 #myHeader {
@@ -34,6 +152,7 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 2%;
+  
 }
 
 #myHeader nav {
@@ -174,6 +293,8 @@ nav a:hover {
   font-style:normal;
   font-size: 0.8em;
   font-weight:650;
+
+  z-index: 9999; /* Mettez-le en-dessous de addFormOverlay */
 }
 /* ************************************************* */
 /* *********************SIDEBAR**************************** */  

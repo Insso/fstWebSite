@@ -63,6 +63,8 @@
             </div>
             
     </aside>
+
+    <div id="blurWindow"> </div>
     <header id="myHeader">
         <!-- <nav class="discovery-nav"><a href="#/discovery/anime" spellcheck="false">Anime</a><a href="#/discovery/manga" spellcheck="false">Manga</a><a href="#/discovery/manhwa" spellcheck="false">Manhwa</a><a href="#/discovery/manhua" spellcheck="false">Manhua</a></nav> -->
         <nav>
@@ -106,13 +108,24 @@
 
     <div id="addFormOverlay">
         <form id="addForm">
-          <label for="type">Type:</label>
+          
           <select id="type" name="type">
+            <option value="" disabled selected>Type</option>
             <option value="manga">Manga</option>
             <option value="anime">Anime</option>
             <option value="manhwa">Manhwa</option>
           </select>
-          <!-- Ajoute les autres champs ici (image, titre, status, nombre de chapitres, progression, lien) -->
+          <input type="file" id="imageInput">
+          <input type="text" id="titleInput" placeholder="Title">
+          <select id="status" name="status">
+            <option value="" disabled selected>Status</option>
+            <option value="manga">Done</option>
+            <option value="anime">In progress</option>
+            <option value="manhwa">To see</option>
+          </select>
+          <input type="text" id="chapterInput" placeholder="Chapter">
+          <input type="text" id="progressInput" placeholder="Progress">
+          <input type="text" id="progressInput" placeholder="Link">
           <button type="submit">Add</button>
           <button type="button" id="cancelButton">Cancel</button>
         </form>
@@ -120,4 +133,7 @@
     <script src="/myJS/monScript.js"></script>
 </body>
 </html>
-<!-- config du quick add check conve web2 + la nvl ; j'suis dans l'bain -->
+<!-- j'ai finis le style du form franchement gg reste à linker les actions des bouton 
+     + voir comment stocker les datas
+     + faire les pages pour les index
+     + faire les pages pour Manhwa et Anime -->
