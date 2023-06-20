@@ -40,3 +40,5 @@ newRow.innerHTML = `
 
 // Ajoute la nouvelle ligne à la liste des mangas
 mangaListBody.appendChild(newRow);
+
+

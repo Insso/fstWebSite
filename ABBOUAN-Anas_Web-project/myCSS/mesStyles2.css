@@ -351,6 +351,35 @@ h4 { /* text blanc color + font */
   font-family: 'Inter';
   font-style: inherit;
 }
+
+/* Redirection */
+.homeLink {
+  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+/* Effet de survol du lien "Home" et quickADDcontainer */
+.homeLink:hover {
+  color: white;
+  transform: scale(1.2);
+
+}
+.quickAddLink {
+  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.quickAddLink:hover {
+  color: #02C656;
+  transform: scale(1.2);
+
+}
+.logOutLink {
+  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.logOutLink:hover {
+  transform: scale(1.2);
+}
 /* tout mettre sur la même ligne 
    logoHomeContainer + logoAddContainer + logoDownloadContainer*/
 #logoHomeContainer { 

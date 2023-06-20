@@ -199,6 +199,41 @@ h3{/* pos text home + color + font*/
   font-family: 'Inter';
   font-style: inherit;
 }
+.homeLink {
+  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+/* Effet de survol du lien "Home" et quickADDcontainer */
+.homeLink:hover {
+  color: white;
+  transform: scale(1.2);
+
+}
+.quickAddLink {
+  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.quickAddLink:hover {
+  color: #02C656;
+  transform: scale(1.2);
+
+}
+.logOutLink {
+  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.logOutLink:hover {
+  transform: scale(1.2);
+}
+
+/* Effet de survol du lien "Home" et quickADDcontainer */
+.quickAddLink:hover {
+  color: white;
+  transform: scale(1.2);
+
+}
+
 #textLogOut{ /* pos text logout + color + font*/
   color: #FF7E06;
   font-family: 'Inter';
@@ -249,6 +284,8 @@ div#espaceDeSeparation{
   margin-left: 5%; 
   margin-right: 5%;
 }
+/* Effet de survol du logo "Home" */
+
 #logoAdd{
   margin-left: 5%; 
   margin-right: 5%;
